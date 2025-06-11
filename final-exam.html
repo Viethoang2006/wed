@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra kết thúc</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+</head>
+<body>
+    <div class="quiz-page-container">
+        <!-- CỘT BÊN TRÁI CHỨA CÁC CÂU HỎI -->
+        <div class="quiz-main-content">
+            <h1 id="quiz-title">Bài Kiểm Tra Kết Thúc</h1>
+            <form id="quiz-form">
+                <div id="quiz-container">
+                    <div class="loading-spinner"></div>
+                </div>
+            </form>
+        </div>
+
+        <!-- CỘT BÊN PHẢI CHỨA BẢNG ĐIỀU KHIỂN -->
+        <div class="quiz-sidebar">
+            <div class="sidebar-sticky-content">
+                <div class="progress-panel">
+                    <div class="progress-item">
+                        <span class="progress-label">Số câu đã làm</span>
+                        <span id="answered-count" class="progress-value">0/60</span>
+                    </div>
+                    <div class="progress-item">
+                        <span class="progress-label">Thời gian đã làm</span>
+                        <span id="timer" class="progress-value">00:00:00</span>
+                    </div>
+                </div>
+
+                <div class="nav-panel-container">
+                    <div id="nav-panel">
+                        <!-- Các nút điều hướng câu hỏi sẽ được tạo ở đây -->
+                    </div>
+                </div>
+
+                <button id="submit-btn-panel" class="main-button">Nộp Bài</button>
+
+                <div class="legend">
+                    <div class="legend-item"><span class="legend-color unanswered"></span> Câu chưa làm</div>
+                    <div class="legend-item"><span class="legend-color answered"></span> Câu đã làm</div>
+                    <div class="legend-item"><span class="legend-color flagged"></span> Câu cần xem lại</div>
+                </div>
+                 <a href="index.html" class="back-button">Hủy và quay lại</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tải các tệp JS. THỨ TỰ RẤT QUAN TRỌNG -->
+    <script src="questions.js"></script>
+    <script src="final-exam.js"></script> <!-- Sẽ tạo tệp này ở bước cuối -->
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trắc nghiệm Vật lý - Luyện thi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- === BỔ SUNG: THƯ VIỆN FIREBASE === -->
+    <script type="module">
+        // Cấu hình Firebase sẽ được thêm vào đây ở bước sau
+        // Ví dụ:
+        // import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        // const firebaseConfig = { ... };
+        // const app = initializeApp(firebaseConfig);
+    </script>
+
+</head>
+<body>
+    <div class="main-container">
+        
+        <div class="header-info">
+             <!-- KHU VỰC THỐNG KÊ MỚI -->
+            <div id="stats-section" class="stats-container">
+                <div id="visits-display" class="date-time">
+                    <i class="fa-solid fa-eye"></i>
+                    <span id="visit-count">...</span>
+                </div>
+                <button id="leaderboard-btn" class="stats-button" title="Bảng xếp hạng">
+                    <i class="fa-solid fa-trophy"></i>
+                </button>
+            </div>
+        </div>
+        
+        <h1>Ngân Hàng Câu Hỏi Vật Lý</h1>
+        <p class="subtitle">Lựa chọn ôn tập theo từng chương hoặc kiểm tra tổng hợp kiến thức.</p>
+        
+        <div class="final-exam-section">
+            <a href="final-exam.html" class="final-exam-card">
+                <div class="final-exam-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="final-exam-info">
+                    <h2>Kiểm tra kết thúc</h2>
+                    <p>60 câu hỏi tổng hợp từ tất cả các chương.</p>
+                </div>
+                <div class="final-exam-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        </div>
+
+        <h2 class="section-title">Ôn tập theo chương</h2>
+        <div id="chapter-selection-container">
+            <!-- Các chương sẽ được chèn vào đây tự động -->
+        </div>
+    </div>
+
+    <!-- CỬA SỔ BẢNG XẾP HẠNG (Mặc định bị ẩn) -->
+    <div id="leaderboard-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-ranking-star"></i> Bảng Xếp Hạng</h2>
+                <button id="modal-close-btn" class="close-button">&times;</button>
+            </div>
+            <div id="leaderboard-table-container">
+                <p>Đang tải dữ liệu...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

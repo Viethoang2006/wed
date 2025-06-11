@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài kiểm tra</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+</head>
+<body>
+    <div class="quiz-page-container">
+        <!-- CỘT BÊN TRÁI CHỨA CÁC CÂU HỎI -->
+        <div class="quiz-main-content">
+            <h1 id="quiz-title">Đang tải bài kiểm tra...</h1>
+            <form id="quiz-form">
+                <div id="quiz-container">
+                    <div class="loading-spinner"></div>
+                </div>
+            </form>
+        </div>
+
+        <!-- CỘT BÊN PHẢI CHỨA BẢNG ĐIỀU KHIỂN -->
+        <div class="quiz-sidebar">
+            <div class="sidebar-sticky-content">
+                <div class="progress-panel">
+                    <div class="progress-item">
+                        <span class="progress-label">Số câu đã làm</span>
+                        <span id="answered-count" class="progress-value">0/0</span>
+                    </div>
+                    <div class="progress-item">
+                        <span class="progress-label">Thời gian đã làm</span>
+                        <span id="timer" class="progress-value">00:00:00</span>
+                    </div>
+                </div>
+
+                <div class="nav-panel-container">
+                    <div id="nav-panel">
+                        <!-- Các nút điều hướng câu hỏi sẽ được tạo ở đây -->
+                    </div>
+                </div>
+
+                <button id="submit-btn-panel" class="main-button">Nộp Bài</button>
+
+                <div class="legend">
+                    <div class="legend-item"><span class="legend-color unanswered"></span> Câu chưa làm</div>
+                    <div class="legend-item"><span class="legend-color answered"></span> Câu đã làm</div>
+                    <div class="legend-item"><span class="legend-color flagged"></span> Câu cần xem lại</div>
+                </div>
+                 <a href="index.html" class="back-button">Quay lại chọn chương</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tải các tệp JS. THỨ TỰ RẤT QUAN TRỌNG -->
+    <script src="questions.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
