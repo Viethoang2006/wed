@@ -36,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
         5: { title: "Mạch dao động", icon: "fa-solid fa-wave-square" },
         6: { title: "Sóng điện từ & Truyền thông", icon: "fa-solid fa-tower-broadcast" },
         7: { title: "Sóng cơ & Giao thoa ánh sáng", icon: "fa-solid fa-lightbulb" },
-        8: { title: "Lượng tử ánh sáng & Vật đen", icon: "fa-solid fa-atom" }
+        8: { title: "Lượng tử ánh sáng & Vật đen", icon: "fa-solid fa-atom" },
+        9: { title: "Tổng hợp bài lý thuyết và bài tập Vật Lý đại cương", icon: "fa-solid fa-lightbulb"}
     };
 
     // Chỉ thực hiện nếu tìm thấy container
