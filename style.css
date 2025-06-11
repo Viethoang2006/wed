@@ -72,6 +72,7 @@ h1 { font-size: 2.8rem; font-weight: 700; text-align: center; color: var(--text-
 .quiz-sidebar { flex: 1; min-width: 280px; }
 .sidebar-sticky-content { position: sticky; top: 2rem; }
 
+#quiz-title { text-align: left; }
 .progress-panel { display: flex; justify-content: space-between; background: var(--container-bg); padding: 1rem; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 1.5rem; box-shadow: var(--shadow-color) 0px 4px 12px; }
 .progress-item { text-align: center; flex-basis: 50%; }
 .progress-label { display: block; font-size: 0.85rem; color: #666; }
@@ -99,9 +100,9 @@ h1 { font-size: 2.8rem; font-weight: 700; text-align: center; color: var(--text-
 .flag-button:hover { background-color: hsl(210, 40%, 97%); border-color: var(--primary-color); }
 .flag-button .fa-solid { color: var(--flag-color); }
 .question-block.flagged .flag-button { background-color: var(--flag-color); color: white; border-color: var(--flag-color); }
-.question-block.flagged .flag-button .fa-solid { color: white; }
-.question-block.flagged .flag-button .fa-regular { display: none; }
+.question-block.flagged .flag-button .fa-solid, .question-block.flagged .flag-button .fa-regular { color: white; }
 .question-block:not(.flagged) .flag-button .fa-solid { display: none; }
+.question-block.flagged .flag-button .fa-regular { display: none; }
 
 
 .question-block ul { list-style: none; padding: 0; }
