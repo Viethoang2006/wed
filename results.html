@@ -5,16 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kết quả bài làm</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
 <body>
-    <div class="main-container">
+    <div class="main-container" id="main-results-container">
         <h1>Kết quả bài làm của bạn</h1>
         <div id="score-container"></div>
         <div id="results-container"></div>
-        <a href="index.html" class="main-button">Làm lại từ đầu</a>
+        <a href="index.html" class="main-button">Quay lại trang chủ</a>
     </div>
 
-    <script src="results.js"></script>
+    <div id="save-score-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-award"></i> Chúc mừng!</h2>
+            </div>
+            <div id="final-score-display" class="final-score-text"></div>
+            <p>Nhập tên của bạn để lưu vào bảng xếp hạng.</p>
+            <form id="save-score-form">
+                <input type="text" id="username-input" placeholder="Nhập tên của bạn..." required maxlength="20">
+                <button type="submit" class="main-button submit-button">Lưu điểm</button>
+            </form>
+             <button id="skip-save-btn" class="skip-button">Bỏ qua</button>
+        </div>
+    </div>
+    
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js"></script>
+    <script type="module" src="results.js"></script>
 </body>
 </html>
